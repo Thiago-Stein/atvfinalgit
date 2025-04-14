@@ -2,12 +2,15 @@ programa {
   funcao inicio() {
     inteiro n1
     inteiro n2
-    inteiro resultado
+    inteiro resultadosoma
+    inteiro resultadosub
     escreva("Digite um número \n")
     leia(n1)
     escreva("Agora digite outro número! \n")
     leia(n2)
-    resultado = n1+n2
-    escreva("A soma resulta em ", resultado)
+    resultadosoma = n1+n2
+    resultadosub = n1-n2
+    escreva("A soma resulta em ", resultadosoma,"\n")
+    escreva("A subtração resulta em ", resultadosub)
   }
 }
