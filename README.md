@@ -2,7 +2,7 @@
 
 ## Integrantes do grupo
 -Thiago Gomes stein
--
+-Matheus Gusmão Marques
 -
 
 ## Objetivo
@@ -35,6 +35,11 @@ programa {
 -Utilizou o git add . 
 -Utilizou o git commit para commitar as mudanças realizadas.
 -Por fim utilizou o git push
+
+### Matheus Gusmão Marques
+- Git configurado conforme tutorial do professor.
+- fez 'git pull' após Thiago Gomes Stein.
+- Adicionou a feature de multiplicação ao código.
 
 ## Comandos utilizados
 ### comandos do Thiago Gomes Stein
@@ -117,4 +122,131 @@ To github.com:Thiago-Stein/atvfinalgit.git
 compuni@maker451 MINGW64 ~/atvfinalgit (main)
 $
 
+### Códigos de Matheus Gusmão Marques
+
+mathe@Styx MINGW64 ~
+$ git config --global user.name
+Matheus
+
+mathe@Styx MINGW64 ~
+$ git config --global user.email
+matheus.gusmaomarques@gmail.com
+
+mathe@Styx MINGW64 ~
+$ rm -f ~/.ssh/id_rsa*
+
+mathe@Styx MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C "matheus.gusmaomarques@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/mathe/.ssh/id_rsa):
+Enter passphrase for "/c/Users/mathe/.ssh/id_rsa" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/mathe/.ssh/id_rsa
+Your public key has been saved in /c/Users/mathe/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:i+VdC+xHEKGrmVUX6IqOgM65wvlbIO25aur2KYQfH+M matheus.gusmaomarques@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|          oo.    |
+|         ... .   |
+|        ..o .    |
+|  .      +.o     |
+|.o o   .S.o o    |
+|o.= = .O.+ + .   |
+|=.oB *= o o o    |
+|.X. E .    .     |
+|B+**.            |
++----[SHA256]-----+
+
+mathe@Styx MINGW64 ~
+$ eval "$(ssh-agent -s)"
+Agent pid 855
+
+mathe@Styx MINGW64 ~
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/mathe/.ssh/id_rsa (matheus.gusmaomarques@gmail.com)
+
+mathe@Styx MINGW64 ~
+$ clip < ~/.ssh/id_rsa.pub
+
+mathe@Styx MINGW64 ~
+$ ssh -T git@github.com
+Hi MatheusMarquesG! You've successfully authenticated, but GitHub does not provide shell access.
+
+mathe@Styx MINGW64 ~
+$ git clone git@github.com:Thiago-Stein/atvfinalgit.git
+Cloning into 'atvfinalgit'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+mathe@Styx MINGW64 ~
+$ cd atvfinalgit
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 481 bytes | 7.00 KiB/s, done.
+From github.com:Thiago-Stein/atvfinalgit
+   718514b..d6a6ba8  main       -> origin/main
+Updating 718514b..d6a6ba8
+Fast-forward
+ contaportugol | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git add .
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git commit -m "Criei a variável resultadomult para conseguir adicionar a função de multiplicação para o código, além de printar o resultado da multiplicação."
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git push
+Everything up-to-date
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 2.46 KiB | 105.00 KiB/s, done.
+From github.com:Thiago-Stein/atvfinalgit
+   d6a6ba8..ff1435d  main       -> origin/main
+Updating d6a6ba8..ff1435d
+Fast-forward
+ README.md | 121 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 120 insertions(+), 1 deletion(-)
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git add .
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git commit -m "Criei a variável resultadomult para conseguir adicionar a função de multiplicação para o código, além de printar o resultado da multiplicação."
+[main cd08719] Criei a variável resultadomult para conseguir adicionar a função de multiplicação para o código, além de printar o resultado da multiplicação.
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+mathe@Styx MINGW64 ~/atvfinalgit (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 471 bytes | 235.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Thiago-Stein/atvfinalgit.git
+   ff1435d..cd08719  main -> main
+
+
 ## Observações
+- Ocorreu um erro ao adicionar as alterações feitas no arquivo, mas esse erro foi corrigido =)
