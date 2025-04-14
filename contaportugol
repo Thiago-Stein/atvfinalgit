@@ -1,4 +1,3 @@
-
 programa {
   funcao inicio() {
     inteiro n1
@@ -6,15 +5,21 @@ programa {
     inteiro resultadosoma
     inteiro resultadosub
     inteiro resultadomult
+    inteiro resultadodiv
+
     escreva("Digite um número \n")
     leia(n1)
     escreva("Agora digite outro número! \n")
     leia(n2)
+
     resultadosoma = n1+n2
     resultadosub = n1-n2
     resultadomult = n1*n2
+    resultadodiv = n1/n2
+    
     escreva("A soma resulta em ", resultadosoma,"\n")
     escreva("A subtração resulta em ", resultadosub,"\n")
     escreva("A multiplicação resulta em ", resultadomult,"\n")
+    escreva("A divisão resulta em ", resultadodiv,"\n")
   }
 }
