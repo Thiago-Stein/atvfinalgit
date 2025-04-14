@@ -38,8 +38,14 @@ programa {
 
 ### Matheus Gusmão Marques
 - Git configurado conforme tutorial do professor.
-- fez 'git pull' após Thiago Gomes Stein.
+- Fez 'git pull' após Thiago Gomes Stein.
 - Adicionou a feature de multiplicação ao código.
+
+### Mateus Curti Rodrigues
+- Git configurado conforme tutorial do professor.
+- Fez 'git pull' após Matheus Gusmão Marques fazer alterações e dar 'git push'.
+- Adicionou a feature de divisão ao código.
+- Fez 'git push' nas modificações
 
 ## Comandos utilizados
 ### comandos do Thiago Gomes Stein
@@ -246,6 +252,254 @@ Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:Thiago-Stein/atvfinalgit.git
    ff1435d..cd08719  main -> main
+
+### Comandos utilizados Mateus Curti Rodrigues
+
+compuni@maker316 MINGW64 ~
+$ git config --global user.name
+Andre Russo
+
+compuni@maker316 MINGW64 ~
+$ git config --global user.email
+andrerusso@edu.unifil.br
+
+compuni@maker316 MINGW64 ~
+$ git config --global --unset user.name
+
+compuni@maker316 MINGW64 ~
+$ git config --global --unset user.email
+
+compuni@maker316 MINGW64 ~
+$ ls -al ~/.ssh/id_rsa*
+-rw-r--r-- 1 compuni 1049089 3389 Apr  7 20:26 /c/Users/Compuni/.ssh/id_rsa
+-rw-r--r-- 1 compuni 1049089  750 Apr  7 20:26 /c/Users/Compuni/.ssh/id_rsa.pub
+
+compuni@maker316 MINGW64 ~
+$ rm -f ~/.ssh/id_rsa*
+
+compuni@maker316 MINGW64 ~
+$ git config --global user.name MateusCurti
+
+compuni@maker316 MINGW64 ~
+$ git config --global user.email mateus.curti.r@gmail.com
+
+compuni@maker316 MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C mateus.curti.r@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Compuni/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Compuni/.ssh/id_rsa
+Your public key has been saved in /c/Users/Compuni/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:xJuWwuAIpf/YjkWHQCn7r+dw7YT1yUZEIUYApTYQsl4 mateus.curti.r@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|+.++oo+ o.       |
+|o*.. . +         |
+|+o=E.   +        |
+|o+.= + o +       |
+| oo + = S        |
+|  .= = * .       |
+|  o.* o =        |
+|   *oo .         |
+|  o+o .          |
++----[SHA256]-----+
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$ eval "$(ssh-agent -s)"
+Agent pid 270
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/Compuni/.ssh/id_rsa (mateus.curti.r@gmail.com)
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$ clip < ~/.ssh/id_rsa.pub
+
+compuni@maker316 MINGW64 ~
+$ ssh -T mateus.curti.r@gmail.com
+
+
+
+
+ssh: connect to host gmail.com port 22: Network is unreachable
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$
+
+compuni@maker316 MINGW64 ~
+$ ssh -T git@github.com
+Hi MateusCurti! You've successfully authenticated, but GitHub does not provide shell access.
+
+compuni@maker316 MINGW64 ~
+$ git clone git@github.com:Thiago-Stein/atvfinalgit
+Cloning into 'atvfinalgit'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+compuni@maker316 MINGW64 ~
+$ cd atvfinalgit
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 481 bytes | 19.00 KiB/s, done.
+From github.com:Thiago-Stein/atvfinalgit
+   718514b..d6a6ba8  main       -> origin/main
+Updating 718514b..d6a6ba8
+Fast-forward
+ contaportugol | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git pull
+Already up to date.
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git pull
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 2.89 KiB | 56.00 KiB/s, done.
+From github.com:Thiago-Stein/atvfinalgit
+   d6a6ba8..cd08719  main       -> origin/main
+Updating d6a6ba8..cd08719
+Fast-forward
+ README.md     | 121 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ contaportugol |   8 +++-
+ 2 files changed, 126 insertions(+), 3 deletions(-)
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git commit "Adicionada a operação de divisão, variável resultadodiv criada para mostrar o resultado da divisão"
+error: pathspec 'Adicionada a operação de divisão, variável resultadodiv criada para mostrar o resultado da divisão' did not match any file(s) known to git
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git commit -m "Adicionada a operação de divisão, variável resultadodiv criada para mostrar o resultado da divisão"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contaportugol
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git comit -m "Adicionada a operação de divisão, variável resultdadodiv do tipo inteiro foi criada para mostrar o resultado da divisão dos dois numeros escolhidos"
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git commit -m "Adicionada a operação de divisão, variável resultdadodiv do tipo inteiro foi criada para mostrar o resultado da divisão dos dois numeros escolhidos"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contaportugol
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git commit -m "Adicionada a operação de divisão, variável resultdadodiv do tipo inteiro foi criada para mostrar o resultado da divisão dos dois numeros escolhidos"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contaportugol
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git add .
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git commit -m "Adicionada a operação de divisão, variável resultdadodiv do tipo inteiro foi criada para mostrar o resultado da divisão dos dois numeros escolhidos"
+[main 866f136] Adicionada a operação de divisão, variável resultdadodiv do tipo inteiro foi criada para mostrar o resultado da divisão dos dois numeros escolhidos
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 472.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Thiago-Stein/atvfinalgit
+   cd08719..866f136  main -> main
+
+compuni@maker316 MINGW64 ~/atvfinalgit (main)
+$
 
 
 ## Observações
